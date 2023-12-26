@@ -1,0 +1,54 @@
+# ASP.NET Core MVC
+bin/
+obj/
+*.dll
+*.pdb
+*.suo
+*.cache
+*.log
+*.user
+*.vscode/
+*.vs/
+[Dd]ebug/
+[Rr]elease/
+TestResults/
+*.dbmdl
+*.jfm
+*.pidb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+project.lock.json
+artifacts/
+
+# Visual Studio Code directories
+.vscode/
+
+# Rider directories
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nuget.props
+*.paket/
+*.paket.restore/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Visual Studio for Mac
+.vscode/
+.idea/

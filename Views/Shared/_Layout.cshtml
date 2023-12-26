@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - dotnet_newbie</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/dotnet_newbie.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+    
+        <div class="header_img">
+            <img src="" alt="">
+        </div>
+    </header>
+
+
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        
+        <div class="head">
+               <i class='bx bx-basket bx-sm'></i> 
+            <h1>Sidebar.</h1>
+            
+        </div>
+
+        <div class="sidebar-list">
+            <a href="#">Employees</a>
+            <a href="#">Department</a>
+            <a href="#">Order</a>
+            <a href="#">User</a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <main role="main" class="p-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
