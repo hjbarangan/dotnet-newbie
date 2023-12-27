@@ -14,9 +14,23 @@
 <body>
     <!-- Header -->
     <header class="header" id="header">
-    
         <div class="header_img">
             <img src="" alt="">
+        </div>
+        @* <div class="log-out">
+        <a href=""><i class='bx bx-log-out nav_icon'></i> </a>
+        </div> *@
+        <div class="dropdown rounded">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='bx bx-user nav_icon'></i> Herzlia Barangan
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="d-flex justify-content-center">
+                    <a class="dropdown-item" href=""><i class='bx bx-log-out nav_icon'></i> Logout</a>
+                </li>
+
+            </ul>
         </div>
     </header>
 
@@ -24,18 +38,18 @@
 
     <!-- Sidebar -->
     <nav id="sidebar">
-        
+
         <div class="head">
-               <i class='bx bx-basket bx-sm'></i> 
             <h1>Sidebar.</h1>
-            
+
         </div>
 
         <div class="sidebar-list">
             <a href="#">Employees</a>
             <a href="#">Department</a>
             <a href="#">Order</a>
-            <a href="#">User</a>
+            <a asp-controller="Users" asp-action="Index" >User</a>
+            <a asp-controller="Roles" asp-action="Index" >Roles</a>
         </div>
     </nav>
 

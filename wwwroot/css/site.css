@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --header-height: 3rem;
+  --first-color: #6360b1;
+  --first-color-light: #fdfdfd;
+  --white-color: #f7f6fb;
+  --body-font: "Inter", sans-serif;
+  --normal-font-size: 1rem;
+  --z-fixed: 100;
+}
 
 * {
   margin: 0;
@@ -17,14 +25,24 @@
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+body {
+  font-family: "Inter", sans-serif;
+  margin: 3rem 0 0 0;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 3rem 0 0 0;
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+  }
 }
 
 .head {
@@ -35,26 +53,16 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin:   0 0 0 1rem;
+  margin: 0 0 0 1rem;
   flex-direction: row;
 }
 
-.head i {
-margin: 0 7px 0 7px
-}
-
 .head h1 {
-  font-size: 1.9rem;
   font-weight: 700;
   margin: 0;
   padding: 0;
-}
-
-
-
-#content {
-  flex: 1;
-  padding: 20px;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
 }
 
 #sidebar {
@@ -73,14 +81,14 @@ margin: 0 7px 0 7px
 #sidebar a {
   padding: 16px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   color: #ffff; /* Light gray text color */
   display: block;
 }
 
 #sidebar a:hover {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   color: #8cba80;
   display: block;
 }
@@ -102,4 +110,19 @@ margin: 0 7px 0 7px
   background-color: #f7f6fb;
   z-index: 100;
   transition: 0.5s;
+}
+
+.log-out {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.log-out i:hover {
+  color: #8cba80;
+  border-radius: 50%;
+  padding: 0.5rem;
 }
