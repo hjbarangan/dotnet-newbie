@@ -8,7 +8,7 @@ public class Role
     public int Id { get; set; }
     public string? Name { get; set; }
 
-   [Display(Name = "Created At")]
+   [Display(Name = "Date Created")]
    [DataType(DataType.Date)]
     public DateTime CreatedAt { get; set; }
 

@@ -13,7 +13,7 @@
 
 <body>
     <!-- Header -->
-    <header class="header" id="header">
+    <header class="nav">
         <div class="header_img">
             <img src="" alt="">
         </div>
@@ -45,11 +45,37 @@
         </div>
 
         <div class="sidebar-list">
-            <a href="#">Employees</a>
-            <a href="#">Department</a>
-            <a href="#">Order</a>
-            <a asp-controller="Users" asp-action="Index" >User</a>
-            <a asp-controller="Roles" asp-action="Index" >Roles</a>
+
+            <a href="#">
+                <div class="d-flex align-items-center">
+                    <i class='bx bx-chart nav_icon mx-2'></i>Dashboard
+                </div>
+            </a>
+            <a href="#">
+                <div class="d-flex align-items-center">
+                    <i class='bx bx-search nav_icon mx-2'></i>Employees
+                </div>
+            </a>
+            <a href="#">
+                <div class="d-flex align-items-center">
+                    <i class='bx bx-home nav_icon mx-2'></i>Department
+                </div>
+            </a>
+            <a href="#">
+                <div class="d-flex align-items-center">
+                    <i class='bx bx-cart nav_icon mx-2'></i>Order
+                </div>
+            </a>
+            <a asp-controller="Users" asp-action="Index">
+                <div class="d-flex align-items-center">
+                    <i class='bx bx-user nav_icon mx-2'></i>User
+                </div>
+            </a>
+            <a asp-controller="Roles" asp-action="Index">
+                <div class="d-flex align-items-center">
+                    <i class='bx bx-box nav_icon mx-2'></i>Roles
+                </div>
+            </a>
         </div>
     </nav>
 
