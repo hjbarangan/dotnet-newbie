@@ -58,10 +58,19 @@ namespace dotnet_newbie.Controllers
         {
             if (ModelState.IsValid)
             {
+                var name = role.Name;
+                var count = _context.Role.Where(r => r.Name == name).Count();
+                if (count > 0)
+                {
+                    ModelState.AddModelError("Name", "Role name already exists.");
+                    return View(role);
+                }
+                role.CreatedAt = DateTime.Now;
                 _context.Add(role);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(role);
         }
 
