@@ -1,10 +1,91 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="container m-2 p-4 bg-white rounded-3">
 
-    <div class="mt-2 text-center ">
-        <h1 class="">Welcome</h1>
-        <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<body>
+    <div class="header">
+        <div class="header__title">
+            <h2>hrzl.</h2>
+        </div>
     </div>
-</div>
+    <div class="login__container">
+        <div class="login__container--form">
+            <div class="login__container--form-header">
+            </div>
+            <div class="login__container--field">
+                <p>test</p>
+                <input class="form-control login-input" type="text" name="">
+            </div>
+            <div class="login__container--field">
+                <p>test</p>
+                <input class="form-control login-input" type="text" name="">
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<style>
+    .header {
+        width: 97vw;
+        height: 5rem;
+        display: flex;
+        justify-content: start;
+        align-self: start;
+        padding: 5px;
+    }
+
+    .header__title {
+        width: 10%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__title h2 {
+        font-weight: bold;
+    }
+
+
+    .login-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login__container {
+        border: solid 1px red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 90%;
+    }
+
+    .login__container--form {
+        border: solid 1px blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 40%;
+        margin: 2rem;
+
+    }
+
+    .login__container .login__container--form-header {
+        border: solid 1px blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 10%;
+        width: 70%;
+        margin: 2rem;
+    }
+
+    @*.login-container{display:flex;justify-content:center;align-items:center;top:0;left:0;}*@
+</style>

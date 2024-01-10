@@ -17,6 +17,8 @@
   box-sizing: border-box;
 }
 
+
+
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus,
@@ -26,8 +28,13 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  margin: 3rem 0 0 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("/assets/Frame8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 a,
@@ -38,13 +45,13 @@ a:active {
   color: #000;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
     padding-left: calc(var(--nav-width) + 2rem);
   }
-}
-
+} */
+/* 
 .head {
   background-color: #86d179;
   color: #fff;
@@ -82,7 +89,7 @@ a:active {
   padding: 16px;
   text-decoration: none;
   font-size: 14px;
-  color: #ffff; /* Light gray text color */
+  color: #ffff;
   display: block;
 }
 
@@ -132,5 +139,4 @@ a:active {
   font-weight: 700;
   color: #000;
   font-family: "Poppins", sans-serif;
-}
-
+} */
