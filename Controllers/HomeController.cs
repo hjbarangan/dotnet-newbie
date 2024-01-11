@@ -34,10 +34,10 @@ public class HomeController : Controller
             if (response.IsSuccessStatusCode)
             {
                 string json = await response.Content.ReadAsStringAsync();
-                NewsResponse newsResponse = JsonConvert.DeserializeObject<NewsResponse>(json);
-                List<NewsArticle> newsArticles = newsResponse.Articles;
+                NewsResponse? newsResponse = JsonConvert.DeserializeObject<NewsResponse>(json);
+                List<NewsArticle>? newsArticles = newsResponse?.Articles;
                 Console.WriteLine(json);
-                return View(newsArticles);
+                return View(newsArticles ?? new List<NewsArticle>());
             }
             else
             {
