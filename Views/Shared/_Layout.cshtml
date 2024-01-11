@@ -14,7 +14,7 @@
 @* <body> *@
 
 
-@if (@ViewData["Title"] != "Login")
+@if ((string)@ViewData["Title"] != "Login" && (string)@ViewData["Title"] != "News")
 {
 
     <!-- Header -->
@@ -80,11 +80,10 @@
 
 
 
-@* <div class="container">
-<main role="main" class="p-3"> *@
+
 @RenderBody()
-@* </main>
-</div> *@
+
+
 
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>

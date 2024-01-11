@@ -1,6 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "News";
 }
-<h1>@ViewData["Title"]</h1>
+@model List<NewsArticle>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<h2>Privacy Policy</h2>
+<h3>Top Headlines</h3>
+<ul>
+@foreach (var article in Model)
+{
+    <h3>@article.Title</h3>
+    <p>@article.Description</p>
+    @if (article.UrlToImage != null)
+    {
+        <img src="@article.UrlToImage" alt="@article.Title" />
+    }
+    <a href="@article.Url">Read More</a>
+    <br />
+}
+</ul>

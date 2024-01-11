@@ -22,7 +22,10 @@
                     </div>
                     <div class="login__container--field-input">
                         <p>Password</p>
-                        <input class="form-control login-input" type="text" name="">
+                        <input class="form-control login-input" type="password" name="">
+                    </div>
+                    <div class="sign-up">
+                        <a asp-controller="Roles" asp-action="Index">Forgot Password?</a>
                     </div>
 
                 </div>
@@ -143,7 +146,7 @@
         justify-content: flex-end;
         align-items: center;
         margin: 0.5rem;
-        height: 20%;
+        height: 25%;
         width: 100%;
     }
 
@@ -190,6 +193,18 @@
     }
 
 
+    .sign-up {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        padding-right: 8px;
+    }
+
+    .sign-up a {
+        font-weight: 600;
+    }
 
     @*.login-container{display:flex;justify-content:center;align-items:center;top:0;left:0;}*@
 </style>
