@@ -1,8 +1,8 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Login";
 }
 
-<body>
+<body class="login">
     <div class="header">
         <div class="header__title">
             <h2>hrzl.</h2>
@@ -29,10 +29,11 @@
 
                 <div class="login__container--button-field">
                     <div class="login__container--field">
-
-                        <button type="text" name="">
-                            Login
-                        </button>
+                        <a asp-controller="Roles" asp-action="Index">
+                            <button type="text" name="">
+                                Login
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -44,6 +45,16 @@
 
 
 <style>
+    .login {
+        font-family: "Poppins", sans-serif;
+        background-image: url("/assets/Frame8.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
     .header {
         width: 97vw;
         height: 5rem;
@@ -73,8 +84,7 @@
     }
 
     .login__container {
-        border: solid 1px red;
-        display: flex;
+    @*border:solid1pxred;*@display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -83,8 +93,7 @@
     }
 
     .login__container--form {
-        border: solid 1px blue;
-        display: flex;
+    @*border:solid1pxblue;*@display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -95,12 +104,12 @@
     }
 
     .login__container--form-header {
-        border: solid 1px black;
-        display: flex;
+    @*border:solid1pxblack;*@display: flex;
         justify-content: center;
         align-items: flex-end;
         height: 20%;
         width: 100%;
+        margin-bottom: 2.2rem;
     }
 
     .login__container--form-header h1 {
@@ -109,8 +118,7 @@
     }
 
     .login__container--field {
-        border: solid 1px green;
-        display: flex;
+    @*border:solid1pxgreen;*@display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -120,8 +128,7 @@
     }
 
     .login__container--form-body {
-        border: solid 1px red;
-        display: flex;
+    @*border:solid1pxred;*@display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -131,8 +138,7 @@
     }
 
     .login__container--button-field {
-        border: solid 1px red;
-        display: flex;
+    @*border:solid1pxred;*@display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
@@ -152,8 +158,7 @@
     }
 
     .login__container--input-form {
-        border: solid 1px red;
-        display: flex;
+    @*border:solid1pxred;*@display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -163,8 +168,7 @@
     }
 
     .login__container--field-input {
-        border: solid 1px red;
-        display: flex;
+    @*border:solid1pxred;*@display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
@@ -181,8 +185,8 @@
 
 
     .login__container--field-input input {
-          background: rgba(255, 255, 255, 0.8);
-border-radius: 8px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
     }
 
 

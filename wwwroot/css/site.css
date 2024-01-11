@@ -17,8 +17,6 @@
   box-sizing: border-box;
 }
 
-
-
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus,
@@ -29,10 +27,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url("/assets/Frame8.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 100vw;
   height: 100vh;
 }
@@ -51,7 +45,7 @@ a:active {
     padding-left: calc(var(--nav-width) + 2rem);
   }
 } */
-/* 
+
 .head {
   background-color: #86d179;
   color: #fff;
@@ -139,4 +133,4 @@ a:active {
   font-weight: 700;
   color: #000;
   font-family: "Poppins", sans-serif;
-} */
+}
