@@ -26,8 +26,9 @@ public class HomeController : Controller
 
     public async Task<ActionResult> Privacy()
     {
-        var url = "https://newsapi.org/v2/top-headlines?country=us&from=2024-01-11&apiKey=API_KEY_HERE";
-
+        string dateToday = DateTime.Now.ToString("yyyy-MM-dd");
+        string url = $"https://newsapi.org/v2/top-headlines?country=ph&from={dateToday}&sortBy=popularity&apiKey=b72aec5a15ba4194ad52ba89360ec2ea";
+        Console.WriteLine($"URL: {url}");
         using (var request = new HttpRequestMessage(HttpMethod.Get, url))
         {
             var response = await client.SendAsync(request);
@@ -36,7 +37,7 @@ public class HomeController : Controller
                 string json = await response.Content.ReadAsStringAsync();
                 NewsResponse? newsResponse = JsonConvert.DeserializeObject<NewsResponse>(json);
                 List<NewsArticle>? newsArticles = newsResponse?.Articles;
-                Console.WriteLine(json);
+                Console.WriteLine($"Error: {json}");
                 return View(newsArticles ?? new List<NewsArticle>());
             }
             else
