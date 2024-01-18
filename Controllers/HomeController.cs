@@ -37,7 +37,6 @@ public class HomeController : Controller
                 string json = await response.Content.ReadAsStringAsync();
                 NewsResponse? newsResponse = JsonConvert.DeserializeObject<NewsResponse>(json);
                 List<NewsArticle>? newsArticles = newsResponse?.Articles;
-                Console.WriteLine($"Error: {json}");
                 return View(newsArticles ?? new List<NewsArticle>());
             }
             else

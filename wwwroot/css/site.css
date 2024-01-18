@@ -134,3 +134,50 @@ a:active {
   color: #000;
   font-family: "Poppins", sans-serif;
 }
+/* START HERE */
+
+.main__body {
+  display: flex;
+}
+
+.body__content {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-sidebar,
+.right-sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.left-sidebar {
+  order: -1; /* Placing the left sidebar before the content in the flex order */
+}
+
+.right-sidebar {
+  order: 1; /* Placing the right sidebar after the content in the flex order */
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar a:hover {
+  color: #007bff;
+}
