@@ -1,10 +1,210 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Login";
 }
-<div class="container m-2 p-4 bg-white rounded-3">
 
-    <div class="mt-2 text-center ">
-        <h1 class="">Welcome</h1>
-        <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<body class="login">
+    <div class="header">
+        <div class="header__title">
+            <h2>hrzl.</h2>
+        </div>
     </div>
-</div>
+    <div class="login__container">
+        <div class="login__container--form">
+            <div class="login__container--form-header">
+                <h1>Happening Now.</h1>
+            </div>
+
+            <div class="login__container--form-body">
+                <div class="login__container--input-form">
+                    <div class="login__container--field-input">
+                        <p>Username</p>
+                        <input class="form-control login-input" type="text" name="">
+                    </div>
+                    <div class="login__container--field-input">
+                        <p>Password</p>
+                        <input class="form-control login-input" type="password" name="">
+                    </div>
+                    <div class="sign-up">
+                        <a asp-controller="Roles" asp-action="Index">Forgot Password?</a>
+                    </div>
+
+                </div>
+
+                <div class="login__container--button-field">
+                    <div class="login__container--field">
+                        <a asp-controller="Roles" asp-action="Index">
+                            <button type="text" name="">
+                                Login
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+<style>
+    .login {
+        font-family: "Poppins", sans-serif;
+        background-image: url("/assets/Frame8.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .header {
+        width: 97vw;
+        height: 5rem;
+        display: flex;
+        justify-content: start;
+        align-self: start;
+        padding: 5px;
+    }
+
+    .header__title {
+        width: 10%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__title h2 {
+        font-weight: bold;
+    }
+
+
+    .login-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login__container {
+    @*border:solid1pxred;*@display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 90%;
+    }
+
+    .login__container--form {
+    @*border:solid1pxblue;*@display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 40%;
+        margin: 2rem;
+
+    }
+
+    .login__container--form-header {
+    @*border:solid1pxblack;*@display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 20%;
+        width: 100%;
+        margin-bottom: 2.2rem;
+    }
+
+    .login__container--form-header h1 {
+        font-weight: bold;
+        color: white;
+    }
+
+    .login__container--field {
+    @*border:solid1pxgreen;*@display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem;
+        height: 60%;
+        width: 70%;
+    }
+
+    .login__container--form-body {
+    @*border:solid1pxred;*@display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0.5rem;
+        height: 60%;
+        width: 100%;
+    }
+
+    .login__container--button-field {
+    @*border:solid1pxred;*@display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0.5rem;
+        height: 25%;
+        width: 100%;
+    }
+
+    .login__container--field button {
+        width: 12rem;
+        height: 2.5rem;
+        background-color: #281C44;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .login__container--input-form {
+    @*border:solid1pxred;*@display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0.5rem;
+        height: 40%;
+        width: 100%;
+    }
+
+    .login__container--field-input {
+    @*border:solid1pxred;*@display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0.5rem;
+        height: 50%;
+        width: 50%;
+    }
+
+    .login__container--field-input p {
+        color: white;
+        letter-spacing: -0.02em;
+    }
+
+
+
+    .login__container--field-input input {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+    }
+
+
+    .sign-up {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        padding-right: 8px;
+    }
+
+    .sign-up a {
+        font-weight: 600;
+    }
+
+    @*.login-container{display:flex;justify-content:center;align-items:center;top:0;left:0;}*@
+</style>

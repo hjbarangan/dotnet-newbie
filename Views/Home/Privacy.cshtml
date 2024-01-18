@@ -1,6 +1,151 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "News";
 }
-<h1>@ViewData["Title"]</h1>
+@model List<NewsArticle>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="explore__page">
+
+
+    <div class="search__bar">
+        <input type="text">
+    </div>
+    <div class="trends__header">
+        <h2>Trends for you</h2>
+    </div>
+
+    <div class="trends__lists">
+        <div class="trends__items">
+            <div class="trends__items--hashtags">
+                <p>#RE-ORG??</p>
+            </div>
+            <div class="trends__items--count">
+                <p>1,430 posts</p>
+            </div>
+        </div>
+
+        <div class="trends__items">
+            <p>#byebiot3ch</p>
+            <p>1,430 posts</p>
+        </div>
+    </div>
+
+    <div class="article__container">
+        <div class="article__header">
+            <h3>Top Headlines</h3>
+        </div>
+
+
+        <div class="article__items">
+            @foreach (var article in Model)
+            {
+                <div class="article__item--header">
+                    <h4>@article.Title</h4>
+                    <p>@article.Description</p>
+                </div>
+
+                @if (article.UrlToImage != null)
+                {
+                    <div class="article__item--image">
+                        <img src="@article.UrlToImage" alt="@article.Title" />
+                    </div>
+                }
+                <div class="article__item--url">
+
+                    <a href="@article.Url">Read More</a>
+                </div>
+                <br />
+            }
+        </div>
+
+
+    </div>
+</div>
+<style>
+    * {
+        color: #fff;
+    }
+
+    .explore__page {
+        background-color: #22223B
+    }
+
+    .article__header {
+        border: 1px solid black;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article__container {
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .article__items {
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .search__bar {
+        border: 1px solid black;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .trends__header {
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .trends__lists {
+        border: 1px solid black;
+        width: 100%;
+        height: 18%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .trends__items {
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .trends__items--hashtags {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .article {
+        border: 1px solid black;
+    }
+
+    .article__title {
+        font-size: 1.5em;
+    }
+</style>

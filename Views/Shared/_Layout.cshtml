@@ -11,86 +11,109 @@
     <link rel="stylesheet" href="~/dotnet_newbie.styles.css" asp-append-version="true" />
 </head>
 
-<body>
-    <!-- Header -->
-    <header class="nav">
-        <div class="header_img">
-            <img src="" alt="">
-        </div>
-        @* <div class="log-out">
-        <a href=""><i class='bx bx-log-out nav_icon'></i> </a>
-        </div> *@
-        <div class="dropdown rounded">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class='bx bx-user nav_icon'></i> Herzlia Barangan
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li class="d-flex justify-content-center">
-                    <a class="dropdown-item" href=""><i class='bx bx-log-out nav_icon'></i> Logout</a>
-                </li>
-
-            </ul>
-        </div>
-    </header>
+<section class="main__body">
 
 
+    @if (ViewData["Title"]?.ToString() != null && ViewData["Title"]?.ToString() != "Login")
+    {
 
-    <!-- Sidebar -->
-    @* <nav id="sidebar">
-
-        <div class="head">
-            <h1>Sidebar.</h1>
-
-        </div>
-
-        <div class="sidebar-list">
-
-            <a href="#">
-                <div class="d-flex align-items-center">
-                    <i class='bx bx-chart nav_icon mx-2'></i>Dashboard
-                </div>
-            </a>
-            <a href="#">
-                <div class="d-flex align-items-center">
-                    <i class='bx bx-search nav_icon mx-2'></i>Employees
-                </div>
-            </a>
-            <a href="#">
-                <div class="d-flex align-items-center">
-                    <i class='bx bx-home nav_icon mx-2'></i>Department
-                </div>
-            </a>
-            <a href="#">
-                <div class="d-flex align-items-center">
-                    <i class='bx bx-cart nav_icon mx-2'></i>Order
-                </div>
-            </a>
-            <a asp-controller="Users" asp-action="Index">
-                <div class="d-flex align-items-center">
-                    <i class='bx bx-user nav_icon mx-2'></i>User
-                </div>
-            </a>
-            <a asp-controller="Roles" asp-action="Index">
-                <div class="d-flex align-items-center">
-                    <i class='bx bx-box nav_icon mx-2'></i>Roles
-                </div>
-            </a>
-        </div>
-    </nav> *@
-
-
-    <div class="container">
-        <main role="main" class="p-3">
-            @RenderBody()
-        </main>
+        <!-- Header -->
+        @* <header class="nav">
+    <div class="header_img">
+    <img src="" alt="">
     </div>
 
+    <div class="dropdown rounded">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+    data-bs-toggle="dropdown" aria-expanded="false">
+    <i class='bx bx-user nav_icon'></i> Herzlia Barangan
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li class="d-flex justify-content-center">
+    <a class="dropdown-item" href=""><i class='bx bx-log-out nav_icon'></i> Logout</a>
+    </li>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
+    </ul>
+    </div>
+    </header> *@
+
+        <!-- Sidebar -->
+        @* <nav id="sidebar">
+            <div class="head">
+                <h1>Sidebar.</h1>
+            </div>
+            <div class="sidebar-list">
+                <a href="#">
+                    <div class="d-flex align-items-center">
+                        <i class='bx bx-chart nav_icon mx-2'></i>Dashboard
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="d-flex align-items-center">
+                        <i class='bx bx-search nav_icon mx-2'></i>Employees
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="d-flex align-items-center">
+                        <i class='bx bx-home nav_icon mx-2'></i>Department
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="d-flex align-items-center">
+                        <i class='bx bx-cart nav_icon mx-2'></i>Order
+                    </div>
+                </a>
+                <a asp-controller="Users" asp-action="Index">
+                    <div class="d-flex align-items-center">
+                        <i class='bx bx-user nav_icon mx-2'></i>User
+                    </div>
+                </a>
+                <a asp-controller="Roles" asp-action="Index">
+                    <div class="d-flex align-items-center">
+                        <i class='bx bx-box nav_icon mx-2'></i>Roles
+                    </div>
+                </a>
+            </div>
+        </nav> *@
+
+  <div class="left-sidebar">
+      <!-- Left Sidebar content goes here -->
+      <h2>Left Sidebar</h2>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </div>
+
+    }
+
+
+    <main class="body__content">
+        @RenderBody()
+    </main>
+
+    @if (ViewData["Title"]?.ToString() != null && ViewData["Title"]?.ToString() != "Login")
+    {
+        @* <aside>
+            <partial name="_Trends.cshtml" />
+        </aside> *@
+  <div class="right-sidebar">
+      <!-- Right Sidebar content goes here -->
+      <h2>Right Sidebar</h2>
+      <ul>
+        <li><a href="#">Link A</a></li>
+        <li><a href="#">Link B</a></li>
+        <li><a href="#">Link C</a></li>
+      </ul>
+    </div>
+    }
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+@* </body> *@
 
 </html>

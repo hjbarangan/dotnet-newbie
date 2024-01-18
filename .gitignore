@@ -52,3 +52,5 @@ $RECYCLE.BIN/
 # Visual Studio for Mac
 .vscode/
 .idea/
+
+.fake
